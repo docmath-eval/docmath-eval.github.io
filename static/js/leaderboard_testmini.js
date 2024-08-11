@@ -1,5 +1,5 @@
-function generateTestTable() {
-  var data = test_score_table; // The variable from model_scores_testmini.js
+function generateTable() {
+  var data = testmini_score_table; // The variable from model_scores_testmini.js
 
   var table = '<table class="js-sort-table" id="results">';
   table += `<tr>
@@ -71,15 +71,14 @@ function generateTestTable() {
         table += `<td>${entry["simplong_cot"].toFixed(1).toString()}</td>`;
         table += `<td>${entry["complong_pot"].toFixed(1).toString()}</td>`;
         table += `<td>${entry["complong_cot"].toFixed(1).toString()}</td>`;
-        table += `<td>${entry["average_pot"].toFixed(1).toString()}</td>`;
+        table += `<td><b>${entry["average_pot"].toFixed(1).toString()}</b></td>`;
         table += `<td><b>${entry["average_cot"].toFixed(1).toString()}</b></td>`;
-      }
+        }
         table += '</tr>';
 
   table += '</table>';
-  document.getElementById('test_leaderboard').innerHTML = table; // Assuming you have a div with id 'container' where the table will be placed
+  document.getElementById('testmini_leaderboard').innerHTML = table; // Assuming you have a div with id 'container' where the table will be placed
 }
 
 // Call the function when the window loads
-document.addEventListener('DOMContentLoaded', generateTestTable);
-  
+document.addEventListener('DOMContentLoaded', generateTable);

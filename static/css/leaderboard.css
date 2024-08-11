@@ -69,6 +69,14 @@ table#results.js-sort-14 tbody tr td:nth-child(15) {
     background-color: #f5f5f5;
 }
 
+#results tr:nth-child(1) {
+    background-color: #ddd;
+}
+
+#results tr:nth-child(2) {
+    background-color: #b4def57e;
+}
+
 #results tr:hover {
     background-color: #ddd;
 }

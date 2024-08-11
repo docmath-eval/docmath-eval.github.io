@@ -29,9 +29,9 @@
   <!--  -->
   <script type="text/javascript" src="static/js/sort-table.js" defer></script>
   <script src="./static/js/explorer-index.js"></script>
-  <script src="./static/js/leaderboard_development.js"></script>
+  <script src="./static/js/leaderboard_testmini.js"></script>
   <script src="./static/js/leaderboard_test.js"></script>  
-  <script src="./static/js/model_scores_development.js" defer></script>
+  <script src="./static/js/model_scores_testmini.js" defer></script>
   <script src="./static/js/model_scores_test.js" defer></script>
 </head>
 <body>
@@ -112,7 +112,7 @@
             <span class="author-block"><sup style="color:#ffac33">3</sup>Penn State University</span><br>
             <span class="author-block"><sup style="color:#1649e2">4</sup>Carnegie Mellon University,</span>
             <span class="author-block"><sup style="color:#eb0a95">5</sup>Allen Institute for AI</span><br>
-            <span class="paper-block"><b style="color:#f41c1c">ACL 2024 Oral</b> (195 in 1952, 10.0%)</span>
+            <span class="paper-block"><b style="color:#f41c1c">ACL 2024 Oral</b> </span>
           </div>
 
           <div class="column has-text-centered">
@@ -215,7 +215,7 @@
           <!-- <p class="mt-3">Accuracy scores on the <b>testmini</b> subset</span>. -->
           </p>
 
-          <div id="development_leaderboard"></div>
+          <div id="testmini_leaderboard"></div>
         </div>
 
         <h2 class="title is-3" id="leaderboard_test">Leaderboard of DocMath-Eval Test Set</h2>
@@ -225,16 +225,6 @@
 
           <div id="test_leaderboard"></div>
 
-          <b>Evaluation Sets:</b> <b>SS:</b> DM<sub>SimpShort</sub>,
-          <b>CS:</b> DM<sub>CompShort</sub>,
-          <b>SL:</b> DM<sub>SimpLong</sub>,
-          <b>CL:</b> DM<sub>CompLong</sub>.
-          <br>
-          <b>Prompting types:</b> 
-          <b>(P):</b> Program-of-Thought,
-          <b>(C):</b> Chain-of-Thought.
-          <br>
-          <br>
           <div>
           <p>🚨 To submit your results to the leaderboard, please send to <a href="mailto:yilun.zhao@yale.edu">this email</a> with your result json files.</p>
           <p>🚨 For more submission details, please refer to <a href="https://github.com/yale-nlp/DocMath-Eval">this link</a>.
