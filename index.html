@@ -127,27 +127,7 @@
                 </a>
               </span>
               <span class="link-block">
-                <a href="https://arxiv.org/abs/2311.09805"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
-                </a>
-              </span>
-              <!-- Video Link. -->
-              <!-- <span class="link-block">
-                <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fab fa-youtube"></i>
-                  </span>
-                  <span>Video</span>
-                </a>
-              </span> -->
-              <!-- Code Link. -->
-              <span class="link-block">
-                <a href="https://github.com/yale-nlp/DocMathEval"
+                <a href="https://github.com/yale-nlp/DocMath-Eval"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
@@ -177,18 +157,6 @@
                   <span>Leaderboard</span>
                 </a>
               </span>
-              <!-- Twitter Link. -->
-              <span class="link-block">
-                <a href=""
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <!-- <i class="far fa-images"></i> -->
-                      <!-- 💻🔗 -->
-                      <p style="font-size:18px">🌐</p>
-                  </span>
-                  <span>Twitter</span>
-                </a>
-              </span>
             </div>
 
           </div>
@@ -204,11 +172,7 @@
     <div class="columns is-centered m-6">
       <div class="column is-full has-text-centered content">
         <div class="content has-text-centered">
-          <img src="static/images/main_figure.png" alt="data-overview" style="max-width: 50%;"/>
-          <p> 
-            Overview of
-            <span class="docmath-eval">DocMath-Eval</span>.<br/>
-          </p> 
+          <img src="static/images/main_figure.png" alt="data-overview" style="max-width: 100%;"/>
         </div>
       </div>
     </div>
@@ -223,18 +187,16 @@
         <h2 class="title is-3">Introduction</h2>
         <div class="content has-text-justified">
           <p>
-            <b>Large Language Models (LLMs)</b> have shown impressive capabilities in solving math word problems, but their ability to perform numerical reasoning in specialized domains with complex documents remains understudied. To address this gap, we present <b>DocMath-Eval</b>, a benchmark designed to evaluate LLMs' numerical reasoning skills in interpreting finance-specific documents containing both text and tables.<br><br>
+            <b>Large Language Models (LLMs)</b> have shown impressive capabilities in solving math word problems, but their ability to perform numerical reasoning in specialized domains with complex documents remains understudied. To address this gap, we present <b>DocMath-Eval</b>, a benchmark designed to evaluate LLMs' numerical reasoning skills in interpreting finance-specific documents containing both text and tables.
 <b>DocMath-Eval</b> consists of <b>four evaluation sets</b> with varying levels of difficulty in numerical reasoning and document understanding:
 
 <ul>
-  <li><b>DM<sub>CompLong</sub></b>: A newly created set testing complex reasoning over extremely long documents with multiple tables.</li>
   <li><b>DM<sub>SimpShort</sub></b>: Simple reasoning over short documents with one table.</li>
   <li><b>DM<sub>SimpLong</sub></b>: Simple reasoning over long documents with multiple tables.</li>
   <li><b>DM<sub>CompShort</sub></b>: Complex reasoning over short documents with one table.</li>
+  <li><b>DM<sub>CompLong</sub></b>: A newly created set testing complex reasoning over extremely long documents with multiple tables.</li>
 </ul>
 
-We conducted <b>a comprehensive evaluation of 42 prominent LLMs</b> from <b>17 organizations</b>, using Chain-of-Thought (CoT) and Program-of-Thought (PoT) prompting methods. The best-performing <b>Claude-3.5-Sonnet</b> model achieves an accuracy of <b>40.0%</b> on the challenging FinNR-CL set using CoT prompting, significantly outperforming other models but still falling short of human expert performance (<b>76%</b>) by <b>36%</b>.<br><br>
-Our analysis reveals that while LLMs perform well on simpler tasks, they struggle with more complex scenarios involving lengthy documents and advanced numerical reasoning. This gap underscores the critical role that <b>DocMath-Eval</b> will play in advancing LLMs' capabilities in specialized domains like finance. The benchmark highlights the need for further research to enhance LLMs' ability to handle complex, real-world numerical reasoning tasks in expert domains.
           </p>
         </div>
       </div>
@@ -248,17 +210,17 @@ Our analysis reveals that while LLMs perform well on simpler tasks, they struggl
     
     <div class="columns is-centered">
       <div class="column is-full has-text-centered content">
-        <h2 class="title is-3" id="leaderboard">Leaderboard on DocMath-Eval (development)</h2>
+        <h2 class="title is-3" id="leaderboard">Leaderboard of DocMath-Eval Testmini Set</h2>
         <div class="content">
-          <p class="mt-3">Accuracy scores on the <b>development</b> subset (<b>800</b> examples: 200 in DM<sub>SimpShort</sub>, 100 in DM<sub>SimpLong</sub>, 200 in DM<sub>CompShort</sub>, 300 in DM<sub>CompLong</sub>) of <span class="docmath-eval">DocMath-Eval</span>.
+          <!-- <p class="mt-3">Accuracy scores on the <b>testmini</b> subset</span>. -->
           </p>
 
           <div id="development_leaderboard"></div>
         </div>
 
-        <h2 class="title is-3" id="leaderboard_test">Leaderboard on DocMath-Eval (test)</h2>
+        <h2 class="title is-3" id="leaderboard_test">Leaderboard of DocMath-Eval Test Set</h2>
         <div class="content">
-          <p class="mt-3">Accuracy scores on the <b>test</b> subset (<b>3200</b> examples: 800 in DM<sub>SimpShort</sub>, 400 in DM<sub>SimpLong</sub>, 800 in DM<sub>CompShort</sub>, 1200 in DM<sub>CompLong</sub>) of <span class="docmath-eval">DocMath-Eval</span>.
+          <!-- <p class="mt-3">Accuracy scores on the <b>test</b> subset (<b>3200</b> examples: 800 in DM<sub>SimpShort</sub>, 400 in DM<sub>SimpLong</sub>, 800 in DM<sub>CompShort</sub>, 1200 in DM<sub>CompLong</sub>) of <span class="docmath-eval">DocMath-Eval</span>. -->
           </p>
 
           <div id="test_leaderboard"></div>
@@ -275,7 +237,7 @@ Our analysis reveals that while LLMs perform well on simpler tasks, they struggl
           <br>
           <div>
           <p>🚨 To submit your results to the leaderboard, please send to <a href="mailto:yilun.zhao@yale.edu">this email</a> with your result json files.</p>
-          <p>🚨 For more submission details, please refer to <a href="https://github.com/yale-nlp/DocMathEval">this link</a>.
+          <p>🚨 For more submission details, please refer to <a href="https://github.com/yale-nlp/DocMath-Eval">this link</a>.
           </p>
           </div>
         </div>
@@ -291,10 +253,10 @@ Our analysis reveals that while LLMs perform well on simpler tasks, they struggl
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title is-3 has-text-centered">BibTeX</h2>
-    <pre><code>@misc{zhao2023docmathevalevaluatingnumericalreasoning,
-      title={DocMath-Eval: Evaluating Numerical Reasoning Capabilities of LLMs in Understanding Long Documents with Tabular Data}, 
-      author={Yilun Zhao and Yitao Long and Hongjun Liu and Linyong Nan and Lyuhao Chen and Ryo Kamoi and Yixin Liu and Xiangru Tang and Rui Zhang and Arman Cohan},
-      year={2023},
+    <pre><code>@misc{zhao2024docmatheval,
+      title={DocMath-Eval: Evaluating Math Reasoning Capabilities of LLMs in Understanding Long and Specialized Documents}, 
+      author={Yilun Zhao and Yitao Long and Hongjun Liu and Ryo Kamoi and Linyong Nan and Lyuhao Chen and Yixin Liu and Xiangru Tang and Rui Zhang and Arman Cohan},
+      year={2024},
       eprint={2311.09805},
       archivePrefix={arXiv},
       primaryClass={cs.CL},
